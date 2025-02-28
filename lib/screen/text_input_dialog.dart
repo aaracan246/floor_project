@@ -14,23 +14,23 @@ displayDialog(
       builder: (context) {
         return AlertDialog(
           title: Text(
-            update ? 'Update task' : 'Add a task'
+            update ? 'Actualizar tarea' : 'Añadir tarea'
           ),
           content: TextField(
             controller: textEditingController,
             decoration: InputDecoration(
-                hintText: update ? task?.name : "enter a title"),
+                hintText: update ? task?.name : "Introduzca la tarea"),
                 
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('CANCEL'),
+              child: Text('CANCELAR'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text(update ? 'UPDATE' : 'OK'),
+              child: Text(update ? 'ACTUALIZAR' : 'OK'),
               onPressed: () async {
                 final message = textEditingController.text;
                 if (update) {

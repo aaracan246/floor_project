@@ -23,6 +23,7 @@ class ListPage extends StatelessWidget {
        
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromARGB(255, 255, 151, 187),
         child: Icon(Icons.add),
         onPressed: () =>
             displayDialog(context: context, dao: dao, update: false, task: null),
